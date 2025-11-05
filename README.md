@@ -25,10 +25,17 @@
      iii. 4xx - Client Error (404 - Not found)
      iv. 5xx - Server Error (500 - Internal Server error)
    - Advantages of HTTP:
-   - - requires less memory and CPU usage
+     - requires less memory and CPU usage
+   - Diadvantages of HTTP:
+     - less secure as there is no encryption method
+       
 4. HTTPS
-5. JSON
-6. API
+   - Secure version of HTTP
+   - communicate between client and server
+   - all data send between client and server is encrypted and can be decrypted. but hackers cannot read or modify it
+     
+6. JSON
+7. API
    - an intermediator (bridge) to allow diff software applications to communicate with each other.
    - Process:
      - Client (user) send request via URL of API.
@@ -41,5 +48,7 @@
     - monitor and update real-time applications
     - data security
 8. REST API
+   - type of API to allow communication between different systems over the internet
+   - 
 9. Client-Server Architecture
 10. API Testing using Postman
