@@ -95,27 +95,6 @@
      - The server sends back a HTTP response (for example: HTML, CSS, and images).
      - The client receives it and renders (shows) the website.
    - Architecture Diagram:
-          [ User Interface Layer ]
-                    ↓
-             ┌─────────────────┐
-             │     CLIENT      │
-             │  (Browser/App)  │
-             └─────────────────┘
-                     │
-        Request (HTTP/HTTPS)
-                     │
-                     ▼
-             ┌─────────────────┐
-             │     SERVER      │
-             │ (Web/App/DB)    │
-             └─────────────────┘
-                     │
-        Response (Data/HTML)
-                     │
-                     ▼
-             ┌─────────────────┐
-             │     CLIENT      │
-             │Displays Result  │
-             └─────────────────┘
+     User Interface Layer -----> Client (Browser App) -----> Request (HTTP/HTTPS) -----> Server (Web/DB/App) -----> Response (Data/HTML) -----> Displays Results to Client
      
 11. API Testing using Postman
