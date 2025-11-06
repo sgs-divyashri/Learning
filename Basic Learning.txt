@@ -1,0 +1,100 @@
+Basic Learning
+
+1. URL
+   - unique address to contain all resources on the internet.
+   - has a protocol (access the resource), domain name (name of the website - host), port (connect to server), path (page navigation), query parameters (filtering), fragment (starts with #, goes to specific section within the same page)
+     
+2. HTTP
+   - transfer of data between client and server
+   - request-response model (client sends request via API to the server, Server processes request and sends back to the client via API)
+   - stateless (not store previous memory)
+   - text-based (stored in lain text only)
+   - to create valid HTTP requests:
+     - URL, HTTP methods (GET, POST), request headers, request body
+   - For HTTP response,
+     - HTTP status code, Response headers, response body
+   - Request methods
+     i. GET - to create new request
+     ii. POST - to send the request
+     iii. PUT - to update the request
+     iv. PATCH - to update only necessary data within the resource
+     v. DELETE - to delete specified resource
+   - Status codes:
+     i. 2xx - Successful (200 - OK, 201 - Created)
+     ii. 3xx - Redirectional (301 - moved permanently)
+     iii. 4xx - Client Error (404 - Not found)
+     iv. 5xx - Server Error (500 - Internal Server error)
+   - Advantages of HTTP:
+     - requires less memory and CPU usage
+   - Diadvantages of HTTP:
+     - less secure as there is no encryption method
+       
+4. HTTPS
+   - Secure version of HTTP
+   - communicate between client and server
+   - all data send between client and server is encrypted and can be decrypted. but hackers cannot read or modify it
+     
+6. JSON
+   - a lightweight format for storing and transporting data
+   - often used when data is sent from a server to a web page
+   - The JSON format is syntactically identical to the code for creating JavaScript objects.
+   - Because of this similarity, a JavaScript program can easily convert JSON data into native JavaScript objects.
+   - universal language for data
+   - Example:
+     {
+       "name": "Divy",
+       "age": 15,
+       "city": "Bangalore",
+       "skills": ["Python", "HTML", "CSS"],
+       "student": true
+     }
+     
+   - JSON in APIs
+     Example: Request and Response
+     Client Request (to a server):
+     POST /user/register HTTP/1.1
+     Content-Type: application/json
+     {
+     "username": "divy123",
+     "email": "divy@gmail.com",
+     "password": "12345"
+     }
+
+     Server Response:
+     {
+     "message": "User registered successfully",
+     "user_id": 101,
+     "status": "success"
+     }
+
+8. API
+   - an intermediator (bridge) to allow diff software applications to communicate with each other.
+   - Process:
+     - Client (user) send request via URL of API.
+     - API sends request to server.
+     - server processes request, send back to API
+     - API send response to the client
+  - It is essential to:
+    - intergrate between diff systems
+    - automate tasks
+    - monitor and update real-time applications
+    - data security
+      
+8. REST API
+   - type of API to allow communication between different systems over the internet
+   - sending requests and receiving responses, typically in JSON format, between the client and server
+   - an architectural design style for APIs
+   - REST APIs use HTTP methods to interact with resources, but they are not the same thing.
+   - defines how the APIs should behave, while HTTP defines the rules for communication over the web.
+     
+9. Client-Server Architecture
+   - a model that describes how two systems (client and server) communicate with each other over a network (like the Internet or a local network)
+   - open any browser and type a URL:
+     - The browser (Client) sends a HTTP request to the Server that hosts the site.
+     - The server receives the request, processes it (maybe checks a database, runs code, etc.).
+     - The server sends back a HTTP response (for example: HTML, CSS, and images).
+     - The client receives it and renders (shows) the website.
+   - Architecture Diagram:
+     User Interface Layer -----> Client (Browser App) -----> Request (HTTP/HTTPS) -----> Server (Web/DB/App) -----> Response (Data/HTML) -----> Displays Results to Client
+     
+11. API Testing using Postman
