@@ -1,0 +1,33 @@
+<!--Task - Guess the number--> 
+
+<h1>Guess the number challenge</h1>
+<input id="guessnum">
+<button onclick="check()">Check</button>
+<p id="res">You are Wrong/Right</p>
+<p id="score">Score: 10</p>
+
+<script>
+    //selecting input box, paragraph
+    var g_num =document.getElementById("guessnum")
+    var result = document.getElementById("res")
+    var score = document.getElementById("score")
+    var rand_num = Math.floor(Math.random()*10)+1
+    var tot_score = 10
+
+    function check(){
+        var entered_num = g_num.value
+        if(rand_num==entered_num){
+            console.log("Right")
+            result.textContent="Right"
+            alert("Hurrayyy!! YOU WON!!")
+        }
+        else{
+            tot_score-=1
+            score.textContent="Score: "+tot_score
+            console.log("Wrong")
+            result.textContent="Wrong"
+            alert("Alas!! YOU LOSE!!")
+        }
+    }
+</script>
+

@@ -1,0 +1,70 @@
+<!-- 
+DOM - Document Object Model
+    -> 
+
+
+Event:
+    -> action or occurence that happens within a web page (user's interaction - click a button, page loading)
+    -> Types of Events:
+       1. onchange - the HTML element has been changed
+       2. onclick - clicks on html element
+       3. onmouseover - moves mouse over html element
+       4. onmouseout - moves mouse away from html elem
+       5. onkeydown - pushes a keyboard key
+       6. onload - browser finished loading the page
+
+Event Handler:
+    -> function that responds to an event when it occurs
+    -> listens for specific event & executes code to perform actions based on those events creating interactive & dynmic web applications
+-->
+
+
+<!DOCTYPE html>
+<head>
+    <title>Demo</title>
+</head>
+
+<body>
+    <!--Titles-->
+    <h1 id="h">Hello World!</h1>
+    <button onclick="changeh1()">Change</button> <!-- onclick -->
+    <p id="p1">Sub-title</p>
+    <button onclick="changep1()">Change</button> <!-- onclick -->
+    <br><br>
+    <!--Addition-->
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <button type="submit" onclick="add()">Add</button>
+    <p>Result: <input type="text" id="result" readonly></p>
+    
+    <script>
+        var h1 = document.getElementById("h") // ID is for identification - unique ID attribute
+        console.log(h1) //Webpage > Inspect > Console > printed <h1 id="h">Hello World!</h1> in console
+        console.log(h1.textContent) //Webpage > Inspect > Console > printed only content
+        //h1.textContent="Bye World!" //modify the heading content and display in the web page as ouput
+        function changeh1(){
+            h1.textContent="Bye World"  // (OR) document.getElementById("h").textContent="Bye World" 
+        }
+        // changeh1() - do not call here. call only when the button is clicked (event occurs) in button tag
+        
+        var para = document.getElementById("p1") // ID is for identification - unique ID
+        console.log(para)  //Webpage > Inspect > Console > printed <p id="p1">Sub-title</p>
+        console.log(para.textContent)   //Webpage > Inspect > Console > printed only content
+        //para.textContent = "Bye" //modify the para content and display in the web page as ouput
+        function changep1(){
+            para.textContent = "Bye"
+        }
+
+        //Addition
+        function add(){
+            var n1=document.getElementById("num1").value
+            var n2=document.getElementById("num2").value
+            var res=Number(n1)+Number(n2)
+
+            document.getElementById("result").value = res;
+            
+            console.log(res)
+        }
+    </script>
+</body>
+</html>

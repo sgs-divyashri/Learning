@@ -1,40 +1,42 @@
-Basic Learning
+Basic Learning for Freshers
 
-1. URL
-   - unique address to contain all resources on the internet.
-   - has a protocol (access the resource), domain name (name of the website - host), port (connect to server), path (page navigation), query parameters (filtering), fragment (starts with #, goes to specific section within the same page)
-     
-2. HTTP
-   - transfer of data between client and server
-   - request-response model (client sends request via API to the server, Server processes request and sends back to the client via API)
-   - stateless (not store previous memory)
-   - text-based (stored in lain text only)
-   - to create valid HTTP requests:
-     - URL, HTTP methods (GET, POST), request headers, request body
-   - For HTTP response,
-     - HTTP status code, Response headers, response body
-   - Request methods
-     i. GET - to create new request
-     ii. POST - to send the request
-     iii. PUT - to update the request
-     iv. PATCH - to update only necessary data within the resource
-     v. DELETE - to delete specified resource
-   - Status codes:
-     i. 2xx - Successful (200 - OK, 201 - Created)
-     ii. 3xx - Redirectional (301 - moved permanently)
-     iii. 4xx - Client Error (404 - Not found)
-     iv. 5xx - Server Error (500 - Internal Server error)
-   - Advantages of HTTP:
-     - requires less memory and CPU usage
-   - Diadvantages of HTTP:
-     - less secure as there is no encryption method
-       
-4. HTTPS
-   - Secure version of HTTP
-   - communicate between client and server
-   - all data send between client and server is encrypted and can be decrypted. but hackers cannot read or modify it
-     
-6. JSON
+1. Programming (Python) [Completed]
+   - Operators, conditions, loops
+   - Functions, parameters
+   - String, array, dictionary
+   - File Handling
+   - Exception Handling
+   - OOPs Concepts
+  
+2. Software Development Concepts [Later]
+   - SDLC
+   - Agile & Scrum Basics (Sprints, standups, story points)
+   - Requirements, Design, Testing, Deployment
+   - Bug Tracking tool (Jira)
+  
+3. Web Development Concepts [In Progress]
+   i. JavaScript
+   ii. Node.js
+   
+4. Database [Partial]
+   - SQL basics, Keys, Joins, Constraints
+   - CRUD Operations
+   - Normalization (1NF, 2NF, 3NF, BCNF, 4NF)
+   - PostgreSQL
+   
+5. API
+   - an intermediator (bridge) to allow diff software applications to communicate with each other.
+   - Process:
+     - Client (user) send request via URL of API.
+     - API sends request to server.
+     - server processes request, send back to API
+     - API send response to the client
+   - It is essential to:
+     - intergrate between diff systems
+     - automate tasks
+     - monitor and update real-time applications
+     - data security
+   JSON
    - a lightweight format for storing and transporting data
    - often used when data is sent from a server to a web page
    - The JSON format is syntactically identical to the code for creating JavaScript objects.
@@ -67,34 +69,138 @@ Basic Learning
      "status": "success"
      }
 
-8. API
-   - an intermediator (bridge) to allow diff software applications to communicate with each other.
-   - Process:
-     - Client (user) send request via URL of API.
-     - API sends request to server.
-     - server processes request, send back to API
-     - API send response to the client
-  - It is essential to:
-    - intergrate between diff systems
-    - automate tasks
-    - monitor and update real-time applications
-    - data security
-      
-8. REST API
+6. REST API
    - type of API to allow communication between different systems over the internet
    - sending requests and receiving responses, typically in JSON format, between the client and server
    - an architectural design style for APIs
    - REST APIs use HTTP methods to interact with resources, but they are not the same thing.
    - defines how the APIs should behave, while HTTP defines the rules for communication over the web.
-     
-9. Client-Server Architecture
-   - a model that describes how two systems (client and server) communicate with each other over a network (like the Internet or a local network)
-   - open any browser and type a URL:
-     - The browser (Client) sends a HTTP request to the Server that hosts the site.
-     - The server receives the request, processes it (maybe checks a database, runs code, etc.).
-     - The server sends back a HTTP response (for example: HTML, CSS, and images).
-     - The client receives it and renders (shows) the website.
-   - Architecture Diagram:
-     User Interface Layer -----> Client (Browser App) -----> Request (HTTP/HTTPS) -----> Server (Web/DB/App) -----> Response (Data/HTML) -----> Displays Results to Client
-     
+
+7. API Testing using Postman [Partial]
+
+8. Version Control [Later]
+   - Install and use Git
+   - Commands: init, clone, add, commit, push, pull, branch, merge
+   - GitHub: repositories, pull requests, issues
+   
+9. Data Structures [Later - Revision]
+   - Arrays, Linked Lists, Stacks, Queues
+   - Searching (linear, binary)
+   - Sorting (bubble, insertion, merge)
+   - Time complexity (Big O Notation)
+
+10. OS (Basics)
+    - What is OS, process, memory, and threads
+    - File system and permissions
+
+11. Networking (Basics)
+   a) IP Address (Internet Protocol Address)
+      - a unique numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication
+	   - Identifying a device on the network.
+	   - Locating the device to enable communication with other devices over a network like the Internet.
+	   Components of an IP Address
+	   - Network Portion: Identifies the network to which the device belongs.
+	   - Host Portion: Identifies the individual device on the network.
+	   - Subnet Mask (for IPv4): Defines which part of the IP is network and which part is host.
+	   - Example: IP 192.168.1.10 with subnet mask 255.255.255.0
+	              Network ID: 192.168.1.0
+		           Host ID: 10
+   b) Ports
+      - a 16-bit number (0-65535) that acts as a communication endpoint for a network connection, specifying which application or service on a device should receive data
+	   - Combined with an IP address, a port number allows a single device to run multiple network applications simultaneously, like a web server, email client, and chat application, all using the same IP address but different ports. There are three main types of ports: well-known ports (0-1023), registered ports (1024-49151), and dynamic/private ports (49152-65535)
+   
+   IP Address vs. Port Number: An IP address identifies a specific device on a network, while a port number identifies a specific application or service on that device. For example, your IP address might be 192.168.1.100, but when you visit a website, the request is sent to port 80 on that IP address for the web server to handle.
+   
+   c) URL
+      - unique address to contain all resources on the internet.
+      - has a protocol (access the resource), domain name (name of the website - host), port (connect to server), path (page navigation), query parameters (filtering), fragment (starts with #, goes to specific section within the same page)
+   d) DNS (Domain Name System)
+      - a hierarchical and distributed naming system that translates domain names into IP addresses.
+	   - When you type a domain name like www.geeksforgeeks.org into your browser, DNS ensures that the request reaches the correct server by resolving the domain to its corresponding IP address.
+   e) HTTP/HTTPS
+      1) HTTP
+		   - transfer of data between client and server
+		   - request-response model (client sends request via API to the server, Server processes request and sends back to the client via API)
+		   - stateless (not store previous memory)
+		   - text-based (stored in lain text only)
+         - to create valid HTTP requests:
+           - URL, HTTP methods (GET, POST), request headers, request body
+		     - For HTTP response,
+           - HTTP status code, Response headers, response body
+		     - Request methods
+           i. GET - to create new request
+		       ii. POST - to send the request
+           iii. PUT - to update the request
+		       iv. PATCH - to update only necessary data within the resource
+           v. DELETE - to delete specified resource
+		     - Status codes:
+           i. 2xx - Successful (200 - OK, 201 - Created)
+           ii. 3xx - Redirectional (301 - moved permanently)
+           iii. 4xx - Client Error (404 - Not found)
+           iv. 5xx - Server Error (500 - Internal Server error)
+		     - Advantages of HTTP:
+           - requires less memory and CPU usage
+         - Diadvantages of HTTP:
+           - less secure as there is no encryption method
+      2) HTTPS
+         - Secure version of HTTP
+         - communicate between client and server
+         - all data send between client and server is encrypted and can be decrypted. but hackers cannot read or modify it
+   f) Client-server Architecture
+      - a model that describes how two systems (client and server) communicate with each other over a network (like the Internet or a local network)
+      - Client: The client initiates requests, waits for the server’s response, and displays it to the user. For example, a web browser acts as a client when it requests a website.
+      - Server: The server processes these requests, retrieves the relevant information, and sends it back to the client. For example, a web server responds with website data when a browser requests it.
+      - open any browser and type a URL:
+        - The browser (Client) sends a HTTP request to the Server that hosts the site.
+        - The server receives the request, processes it (maybe checks a database, runs code, etc.).
+        - The server sends back a HTTP response (for example: HTML, CSS, and images).
+        - The client receives it and renders (shows) the website.
+      - Architecture Diagram:
+        User Interface Layer -----> Client (Browser App) -----> Request (HTTP/HTTPS) -----> Server (Web/DB/App) -----> Response (Data/HTML) -----> Displays Results to Client
+   g) Ping
+      - Ping (Packet Internet Groper) is a basic Internet command used in computer network administration to test and verify the availability of a destination IP address.
+	    - It helps users confirm whether the computer they are trying to reach is operational. 
+	    - To check the ping of any website that corresponds to your computer, follow the given steps:
+	      -> Open Command Prompt or Terminal:
+           For Windows, press Win + R, type cmd, and press Enter.
+           For Mac/Linux, open the Terminal application.
+		    -> In the command prompt or terminal, type the following command:
+           ping<space>[website name]
+		       Replace [website address] with the URL or IP address of the website you want to check and press Enter. For example, to check YouTube’s ping value:
+           ping youtube.com
+   h) Traceroute
+      - 
+   
+12. Software Testing
+    - Unit testing (e.g., Python unittest, Jest)
+	 - Integration testing
+	 - API testing (Postman, Newman, etc.)
+	 - Bug reporting and debugging
+
+13. Cloud & Deployment (Basics)
+    - What cloud computing is (AWS / Azure / IBM Cloud / GCP)
+	 - What deployment means (server hosting, domain, CI/CD pipeline)
+	 - Containers (Docker – just basic concept)
+
+14. Security Awareness
+    - HTTPS and encryption
+	 - Authentication vs Authorization
+	 - Environment variables and API keys
+	 - Avoid hardcoding secrets in code
+	
+15. Optional
+    - Basic Linux Commands (cd, ls, mkdir, grep, etc.)
+	 - AI & Machine Learning basics (if going toward AI)
+	 - GitHub portfolio or simple personal project (even small ones!)
+	
+	
+
+
+
+
+
+
+
+
+
 11. API Testing using Postman
