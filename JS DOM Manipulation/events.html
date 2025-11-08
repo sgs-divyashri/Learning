@@ -1,0 +1,72 @@
+<!--TASK 1-->
+<!--Create an input box. 
+    creae H1 tag
+    Insert this value into the h1 tag using the textContent property
+    use an onkeyup event handler retrieve value from the inp box simultaneously while typing on the keyboard-->
+
+<input id="inp" onkeyup="update()">
+<!-- <button onclick="update()">Button</button> -->
+<h1 id="res"></h1>
+
+<script>
+    //select input tag
+    //select h1 tag
+    var inp_box = document.getElementById("inp")
+    var res = document.getElementById("res")
+
+    function update(){
+        res.textContent=inp_box.value
+    }
+</script>
+
+<!--TASK 2-->
+<!--when a user clicks Add button, dynamically create <h1> element and add it into specific <div> element with the 'id' container in the HTML document-->
+
+<button onclick="addHello()">Add</button>
+<div id="result"></div>
+
+<script>
+    // select div
+    var div = document.getElementById("result")
+
+    function addHello(){
+        // create new element
+        var h1 = document.createElement("h1")
+        h1.textContent="Hello"
+        div.append(h1)
+    }
+</script>
+
+
+<!--TASK 3-->
+<!--Create a HTML button. When clicked, triggers a JS function, changes button's color with each successive click-->
+
+<br>
+<button id="btn" onclick="change()">Change Color</button>
+
+<script>
+    var btn = document.getElementById("btn")
+    function change(){
+        btn.style.backgroundColor="violet"
+    }
+</script>
+
+
+<!--TASK 4-->
+<!--When a user clicks a button, the text from btn is shown in h1 tag located above it-->
+
+<br>
+<h1 id="disp">Name</h1>
+<button onclick="display(event)">Hari</button>
+<button onclick="display(event)">Divi</button>
+<button onclick="display(event)">Krithi</button>
+
+<script>
+    var h1 = document.getElementById("disp")
+    function display(event){
+        // console.log(event.target.textContent)
+        h1.textContent=event.target.textContent
+    }
+</script>
+
+<!--TASK 5-->
