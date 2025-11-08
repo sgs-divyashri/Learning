@@ -159,14 +159,14 @@ Basic Learning for Freshers
         User Interface Layer -----> Client (Browser App) -----> Request (HTTP/HTTPS) -----> Server (Web/DB/App) -----> Response (Data/HTML) -----> Displays Results to Client
    g) Ping
       - Ping (Packet Internet Groper) is a basic Internet command used in computer network administration to test and verify the availability of a destination IP address.
-	    - It helps users confirm whether the computer they are trying to reach is operational. 
-	    - To check the ping of any website that corresponds to your computer, follow the given steps:
-	      -> Open Command Prompt or Terminal:
+	   - It helps users confirm whether the computer they are trying to reach is operational. 
+	   - To check the ping of any website that corresponds to your computer, follow the given steps:
+	     -> Open Command Prompt or Terminal:
            For Windows, press Win + R, type cmd, and press Enter.
            For Mac/Linux, open the Terminal application.
-		    -> In the command prompt or terminal, type the following command:
+		  -> In the command prompt or terminal, type the following command:
            ping<space>[website name]
-		       Replace [website address] with the URL or IP address of the website you want to check and press Enter. For example, to check YouTube’s ping value:
+		     Replace [website address] with the URL or IP address of the website you want to check and press Enter. For example, to check YouTube’s ping value:
            ping youtube.com
    h) Traceroute
       - 
