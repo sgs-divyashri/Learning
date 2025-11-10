@@ -12,14 +12,14 @@ function simpleCalculator(operation) {
         return;
     }
 
-    if (operation === 'add') {
+    if (operation == 'add') {
         result = n1 + n2;
-    } else if (operation === 'sub') {
+    } else if (operation == 'sub') {
         result = n1 - n2;
-    } else if (operation === 'mult') {
+    } else if (operation == 'mult') {
         result = n1 * n2;
-    } else if (operation === 'div') {
-        if (n2 === 0) {
+    } else if (operation == 'div') {
+        if (n2 == 0) {
             alert("Cannot divide by zero!");
             return;
         }

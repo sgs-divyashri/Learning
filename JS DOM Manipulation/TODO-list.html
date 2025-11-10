@@ -1,0 +1,116 @@
+<!--TASK 6-->
+<!--Create a TODO List-->
+
+<!--InnerHTML
+    innerHTML is a property in JS that allows you to access or modify the HTML content of an element
+    in the Document Object Model (DOM)
+    It is  primarily used to retrieve or set the HTML content inside an HTML element-->
+
+<!--Different ways of selecting an element:
+    1. querySelector
+    2. querySelectorAll
+    3. getElementByID
+    4. getElementByClassName
+    5. getElementByTagName-->
+
+
+<input id="inp">
+<button onclick="add()">Add</button>
+<ul id="list-container">
+</ul>
+
+<script>
+    var ul=document.getElementById("list-container")
+    var input = document.getElementById("inp")
+    function add(){
+        var listitem=document.createElement("li")
+        listitem.innerHTML=input.value + " <button onclick=\"deleteItem(event)\">Delete</button>"
+        ul.append(listitem)
+    }
+    function deleteItem(){
+        event.target.parentElement.remove()
+    }
+</script>
+
+
+
+<!--COMPLETE UNDERSTANDING OF THE CONCEPTS CLEARLY-->
+
+
+<!--INNERHTML PROPERTY IN JS-->
+
+<!-- <div id="one">
+    <h1>Hello</h1>
+</div>
+<p id="p">Hi</p>
+<script>
+    var div=document.getElementById("one")
+    var p=document.getElementById("p")
+    console.log(div) // prints complete div tag
+    console.log(div.textContent) // prints only the text inside div tag
+    console.log(div.innerHTML) // prints all the contents inside div tag even though has html tags
+    div.textContent="<h1>Bye</h1>"
+    p.innerHTML="<h1>Bye</h1>"
+</script> -->
+
+
+<!--CSS SELECTORS IN JS-->
+
+<!-- <div class="one">
+    <h1>Hello</h1>
+</div>
+<p>Hi</p>
+<p>How are you?</p>
+<script>
+    var div=document.querySelector(".one") // identifies with dot operator for class, # for id
+    var p=document.querySelector("p") //selects only the first match
+    var para=document.querySelectorAll("p") 
+    console.log(div) // prints complete div tag
+    console.log(p) // //displays the first match
+    console.log(para) // creates a NodeList - like an array - collection of data
+</script> -->
+
+
+<!--CREATING HTML ELEMENT using document.createElement()-->
+
+<!-- <div id="box">
+    <p>Hello</p>
+</div>
+<script>
+    var h1elem=document.createElement("h1")
+    h1elem.innerHTML="Welcome"
+    console.log(h1elem)
+</script> -->
+
+
+<!--ADDING HTML ELEMENT using APPEND, PREPEND, INSERTADJACENTHTML-->
+
+<!-- <div>
+    <h1>Divi</h1>
+    <h1>Hari</h1>
+</div>
+<script>
+    var div=document.querySelector("div")
+    var h1elem=document.createElement("h1")
+    h1elem.textContent="Welcome"
+    div.append("Hello") // after
+    div.append("Hello")
+    div.prepend("How are you?")  // before
+    div.insertAdjacentElement("beforeend", h1elem)  // insert elem before/after 
+    // afterbegin - 
+    // beforebegin - 
+    // afterend -
+    // beforeend - 
+</script> -->
+
+
+<!--DELETING HTML ELEMENT using REMOVE() Method-->
+
+<!-- <div id="box">
+    Welcome
+    <p id="p">How are you?</p>
+</div>
+<script>
+    var para=document.getElementById("p")
+    para.remove()
+</script> -->

@@ -70,3 +70,33 @@
 </script>
 
 <!--TASK 5-->
+<!--List the numbers line by line using h1 tag. 
+    When a number is chosen, that number shld be deleted from the list.
+    The remaining numbers shld be visible.-->
+
+<br><br>
+<h1 id="one" onclick="delItem()">One</h1>
+<!-- <button>Delete</button> -->
+
+<script>
+    // h1
+    var h1=document.getElementById("one")
+    function delItem(){
+        h1.remove()
+    }
+</script>
+
+<br><br>
+<h1 onclick="delItem(event)">One</h1>
+<h1 onclick="delItem(event)">Two</h1>
+<h1 onclick="delItem(event)">Three</h1>
+<h1 onclick="delItem(event)">Four</h1>
+<h1 onclick="delItem(event)">Five</h1>
+<h1 onclick="delItem(event)">Six</h1>
+
+<script>
+    // h1
+    function delItem(){
+        event.target.remove()
+    }
+</script>
