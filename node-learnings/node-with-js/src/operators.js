@@ -34,7 +34,7 @@ console.log(true && true && true)
 
 console.log("---------------------")
 
-console.log(false || false) // Loical OR
+console.log(false || false) // Logical OR
 console.log(true || true || false)
 console.log(false || false || true)
 console.log(true || true)
@@ -47,3 +47,23 @@ console.log(!false && true)
 console.log(false && !true)
 
 // Relational Operators
+console.log("---------------------")
+console.log(42=='42')  // checks only value  // Equality operator
+console.log(42==='42') // checks value and data type  // Strict Equality operator
+
+
+// Nullish Coalesing Operator
+console.log("---------------------")
+let result; // undefined
+result=result ?? 'Welcome'
+console.log(result)
+
+let res = null; // assigned to null
+res=res ?? 'HI'
+console.log(res)
+
+let name1 = 'Div'; // assigned to null
+name1=name1 ?? 'HI'
+console.log(name1)
+
+
